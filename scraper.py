@@ -2,7 +2,8 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-url = "https://www.ceneo.pl/63490289#tab=reviews"
+product_code = input("Podaj kod produktu:")
+url = "https://www.ceneo.pl/"+product_code+"#tab=reviews"
 all_opinions = []
 while(url):
     response = requests.get(url)
